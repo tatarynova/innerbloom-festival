@@ -90,11 +90,11 @@ The purpose of this project is to demonstrate front-end development skills, UI s
 ## Project folder structure:
 
 /project-folder
-├── index.html
-├── lineup.html
-├── schedule.html
-├── tickets.html
-├── styles.css
-├── script.js
-├── README.md
-└── /images
+  ├── index.html
+  ├── lineup.html
+  ├── schedule.html
+  ├── tickets.html
+  ├── styles.css
+  ├── script.js
+  ├── README.md
+  └── /images
