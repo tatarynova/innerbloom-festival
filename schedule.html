@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Innerbloom Schedule</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Header: same for every page -->
+    <header>
+      <div class="header-container">
+        <nav class="header-nav-bar">
+          <!-- main icon links to the main/starting page -->
+          <a class="brand-icon" href="./index.html">
+            <img
+              class="icon"
+              src="./images/sticker.webp"
+              alt="Innerbloom official icon"
+            />
+          </a>
+          <ul class="header-menu">
+            <li><a class="menu-items" href="./index.html">Home</a></li>
+            <li>
+              <a class="menu-items" target="_blank" href="./lineup.html"
+                >Lineup</a
+              >
+            </li>
+            <li>
+              <a class="menu-items" target="_blank" href="./tickets.html"
+                >Tickets</a
+              >
+            </li>
+            <li>
+              <a class="menu-items" target="_blank" href="./schedule.html"
+                >Schedule</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ------------------------------------------------------------ -->
+
+    <!-- Main part of schedule.html page -->
+    <main>
+      <!-- This section reuses a table from index.html file to create a preview for an actual more detailed timetable -->
+      <section id="lineup-section">
+        <div class="lineup-section-title-box">
+          <h2 class="section-title">lineup</h2>
+          <p>More names to be announced</p>
+        </div>
+        <table class="lineup-table">
+          <thead>
+            <tr>
+              <th class="left-column">
+                <p class="t-heading-date">march 20</p>
+                <p class="t-heading-day">friday</p>
+              </th>
+              <th class="column-gap"></th>
+              <th class="right-column">
+                <p class="t-heading-date">march 21</p>
+                <p class="t-heading-day">Saturday</p>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="left-column">Artbat</td>
+              <td class="column-gap"></td>
+              <td class="right-column">Boris Brejcha</td>
+            </tr>
+            <tr>
+              <td class="left-column">Monolink</td>
+              <td class="column-gap"></td>
+              <td class="right-column">Rufus Du Sol</td>
+            </tr>
+            <tr>
+              <td class="left-column">Jan Blomqvist</td>
+              <td class="column-gap"></td>
+              <td class="right-column">Lane 8</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- another button linking to tickets purchase page to create more interaction with the user -->
+        <button class="tickets-button-secondary">
+          <a target="_blank" href="./tickets.html">Tickets &rarr;</a>
+        </button>
+        <!-- a button to scroll down next section (reused on other pages as well) -->
+        <a class="arrow-down-icon" href="./schedule.html#collabsible-lineup"
+          ><img class="icon" src="./images/arrow-down." alt="arrow scroll down"
+        /></a>
+      </section>
+      <!-- Main section of the page, containing collabsible windows with detail schedule for both days of the festival. Collabsible window work as a filter -->
+      <section id="collabsible-lineup">
+        <h2 class="section-title">days</h2>
+        <!-- Collabsible window for day 1 -->
+        <div class="collabsible-section-container">
+          <button type="button" class="collabsible-tab-button">
+            <p>Day 1</p>
+          </button>
+          <div class="collabsible-window">
+            <table class="collabsible-content">
+              <thead>
+                <tr>
+                  <th>
+                    <p>Artist</p>
+                  </th>
+                  <th class="column-gap"></th>
+                  <th>
+                    <p>stage</p>
+                  </th>
+                  <th class="column-gap"></th>
+                  <th>
+                    <p>time slot</p>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Jan Blomqwist (Live)</td>
+                  <td class="column-gap"></td>
+                  <td>
+                    <button data-target="#horizon-stage" id="open-stage-info">
+                      Horizon Stage &rarr;
+                    </button>
+                  </td>
+                  <!-- Each stage title is actually a button that when pressed opens a modal window with detailed information about it -->
+                  <div id="horizon-stage" class="stage-modal-container">
+                    <div class="stage-modal-content">
+                      <!-- PS: following picture is generated by AI -->
+                      <img
+                        src="./images/horizon-stage.png"
+                        alt="horizon stage image"
+                      />
+                      <h3>Theme: Where light meets sound.</h3>
+                      <p>
+                        The Horizon Stage is an open-air amphitheater framed by
+                        warm, golden lighting and large LED panels that create
+                        slow-evolving visual landscapes. Designed for live
+                        melodic and emotional electronic performances, it blends
+                        organic visuals with modern scenography. Soft sand
+                        flooring and tiered viewing areas give the space a
+                        relaxed, sunset-friendly atmosphere. Surrounding food
+                        courts and lounge zones let visitors drift easily
+                        between dancing, socializing and enjoying the music.
+                        This stage is ideal for the warm vocal-driven sets of
+                        Jan Blomqvist and Monolink, building into ARTBAT’s
+                        powerful late-night energy.
+                      </p>
+                      <p class="disclaimer">
+                        Disclaimer: Stage picture is generated by AI
+                      </p>
+                      <button id="close-stage-info">Close</button>
+                    </div>
+                  </div>
+                  <td class="column-gap"></td>
+                  <td>18:00 - 19:30</td>
+                </tr>
+                <tr>
+                  <td>Monolink (Live)</td>
+                  <td class="column-gap"></td>
+                  <td>
+                    <button data-target="#horizon-stage" id="open-stage-info">
+                      Horizon Stage &rarr;
+                    </button>
+                  </td>
+                  <td class="column-gap"></td>
+                  <td>20:00 - 21:45</td>
+                </tr>
+                <tr>
+                  <td>artbat (DJ set)</td>
+                  <td class="column-gap"></td>
+                  <td>
+                    <button data-target="#horizon-stage" id="open-stage-info">
+                      Horizon Stage &rarr;
+                    </button>
+                  </td>
+                  <td class="column-gap"></td>
+                  <td>22:30 - 00:30</td>
+                </tr>
+                <tr>
+                  <td>Closing Ambient Set (Local Artist)</td>
+                  <td class="column-gap"></td>
+                  <td>
+                    <button data-target="#chillout-stage" id="open-stage-info">
+                      Chill Out Garden &rarr;
+                    </button>
+                  </td>
+                  <!-- Each stage title is actually a button that when pressed opens a modal window with detailed information about it -->
+                  <div id="chillout-stage" class="stage-modal-container">
+                    <div class="stage-modal-content">
+                      <!-- PS: following picture is generated by AI -->
+                      <img
+                        src="./images/chill-out-garden.png"
+                        alt="chill out garden stage image"
+                      />
+                      <h3>Theme: A nature-inspired sonic sanctuary.</h3>
+                      <p>
+                        This small organic space is modeled after a forest
+                        clearing, decorated with lanterns, low-hanging fairy
+                        lights, and illuminated sculptures. Beanbags, hammocks,
+                        and small fire pits create pockets of relaxation away
+                        from the main stages. Here, ambient DJs and local
+                        downtempo artists play soothing sets until late at
+                        night. It’s a place to decompress, reconnect with
+                        friends, or recharge between performances. Herbal tea
+                        bars and quiet zones reinforce the calm, making the
+                        Garden a peaceful end-of-night retreat.
+                      </p>
+                      <p class="disclaimer">
+                        Disclaimer: Stage picture is generated by AI
+                      </p>
+                      <button id="close-stage-info">Close</button>
+                    </div>
+                  </div>
+                  <td class="column-gap"></td>
+                  <td>00:30 - 02:00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Collabsible window for Day 2 -->
+          <button type="button" class="collabsible-tab-button">
+            <p>Day 2</p>
+          </button>
+          <div class="collabsible-window">
+            <table class="collabsible-content">
+              <thead>
+                <tr>
+                  <th>
+                    <p>Artist</p>
+                  </th>
+                  <th class="column-gap"></th>
+                  <th>
+                    <p>stage</p>
+                  </th>
+                  <th class="column-gap"></th>
+                  <th>
+                    <p>time slot</p>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Lane 8 (Sunset Set)</td>
+                  <td class="column-gap"></td>
+                  <td>
+                    <button data-target="#aurora-stage" id="open-stage-info">
+                      Aurora Stage &rarr;
+                    </button>
+                  </td>
+                  <!-- Each stage title is actually a button that when pressed opens a modal window with detailed information about it -->
+                  <div id="aurora-stage" class="stage-modal-container">
+                    <div class="stage-modal-content">
+                      <!-- PS: following picture is generated by AI -->
+                      <img
+                        src="./images/aurora-stage.png"
+                        alt="aurora stage image"
+                      />
+                      <h3>Theme: Lights that move with the night.</h3>
+                      <p>
+                        The Aurora Stage is the festival’s largest nighttime
+                        arena, known for its immersive lighting architecture
+                        inspired by the Northern Lights. High-tech laser arrays,
+                        towering LED pillars, and 180° projection mapping wrap
+                        the audience in flowing colors and glitch-infused
+                        motion. The sound system is optimized for deep bass and
+                        crisp melodic elements, making it perfect for Lane 8’s
+                        long journey sets, RÜFÜS DU SOL’s cinematic live
+                        performance, and Boris Brejcha’s signature high-tech
+                        minimal sound. As darkness falls, the entire stage
+                        visually transforms — shifting from sunset pastels into
+                        intense neon waves.
+                      </p>
+                      <p class="disclaimer">
+                        Disclaimer: Stage picture is generated by AI
+                      </p>
+                      <button id="close-stage-info">Close</button>
+                    </div>
+                  </div>
+                  <td class="column-gap"></td>
+                  <td>17:30 - 19:30</td>
+                </tr>
+                <tr>
+                  <td>Monolink (Live)</td>
+                  <td class="column-gap"></td>
+                  <td>
+                    <button data-target="#aurora-stage" id="open-stage-info">
+                      Aurora Stage &rarr;
+                    </button>
+                  </td>
+                  <td class="column-gap"></td>
+                  <td>20:00 - 21:45</td>
+                </tr>
+                <tr>
+                  <td>artbat (DJ set)</td>
+                  <td class="column-gap"></td>
+                  <td>
+                    <button data-target="#aurora-stage" id="open-stage-info">
+                      Aurora Stage &rarr;
+                    </button>
+                  </td>
+                  <td class="column-gap"></td>
+                  <td>22:30 - 00:30</td>
+                </tr>
+                <tr>
+                  <td>Closing Ambient Set (Local Artist)</td>
+                  <td class="column-gap"></td>
+                  <td>
+                    <button data-target="#aurora-stage" id="open-stage-info">
+                      Aurora Stage &rarr;
+                    </button>
+                  </td>
+                  <td class="column-gap"></td>
+                  <td>00:30 - 02:00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- --------------------------------------------------- -->
+    <!-- Footer (reused on every other page of this project) -->
+    <footer>
+      <address class="footer-container">
+        <a href="./index.html">
+          <img
+            class="icon"
+            src="./images/sticker.webp"
+            alt="Innerbloom official icon"
+          />
+        </a>
+        <!-- social media links left blank and actually do not link anywhere -->
+        <ul class="footer-menu">
+          <li>
+            <a href="#">
+              <img
+                class="social-icon instagram-icon"
+                src="./images/instagram."
+                alt="instagram icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                class="social-icon facebook-icon"
+                src="./images/facebook."
+                alt="facebook icon"
+              />
+            </a>
+          </li>
+          <!-- Terms and Conditions part of the footer is a link/button, when pressed opens modal window with simple terms and conditions rules (written by ai), modal window at the footer works for every page -->
+          <li>
+            <button
+              class="open-terms-and-conditions"
+              data-target="#terms-and-conditions"
+            >
+              Terms and Conditions
+            </button>
+            <!-- Modal (hidden by default) window with terms and conditions -->
+            <div class="terms-and-conditions-box" id="terms-and-conditions">
+              <div class="terms-and-conditions-content">
+                <h3>Terms and Conditions</h3>
+                <p>
+                  By purchasing a ticket and attending Innerbloom festival 2026,
+                  you agree that all sales are final and non-refundable, lineup
+                  and schedule may change without notice, and entry may be
+                  refused for safety or security reasons. You must follow all
+                  staff instructions, and bringing prohibited items such as
+                  drugs, weapons, or outside alcohol is not allowed. The
+                  festival is not responsible for lost belongings, injuries, or
+                  damages incurred on-site. A valid ticket and ID are required
+                  for entry, and by entering the event, you consent to being
+                  photographed or recorded for promotional use.
+                </p>
+                <button class="close-terms-and-conditions">Close</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <p class="address-copyright">&copy; 2025 Copyright</p>
+          </li>
+        </ul>
+      </address>
+    </footer>
+    <!-- script has been put at the end to ensure the DOM loads before javascript is executed -->
+    <script src="./script.js"></script>
+  </body>
+</html>

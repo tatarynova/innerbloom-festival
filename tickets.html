@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Innerbloom Tickets</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Header: same for every page -->
+    <header>
+      <div class="header-container">
+        <nav class="header-nav-bar">
+          <!-- main icon links to the main/starting page -->
+          <a class="brand-icon" href="./index.html">
+            <img
+              class="icon"
+              src="./images/sticker.webp"
+              alt="Innerbloom official icon"
+            />
+          </a>
+          <ul class="header-menu">
+            <li><a class="menu-items" href="./index.html">Home</a></li>
+            <li>
+              <a class="menu-items" target="_blank" href="./lineup.html"
+                >Lineup</a
+              >
+            </li>
+            <li>
+              <a class="menu-items" target="_blank" href="./tickets.html"
+                >Tickets</a
+              >
+            </li>
+            <li>
+              <a class="menu-items" target="_blank" href="./schedule.html"
+                >Schedule</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ----------------------------------------------------- -->
+    <!-- Main part of tickets.html page -->
+    <main>
+      <!-- hero title for tickets.html page -->
+      <section class="hero-title-tickets-section">
+        <h2 class="section-title">get your tickets</h2>
+        <!-- a button to scroll down next section (reused on other pages as well) -->
+        <a class="arrow-down-icon" href="./tickets.html#tickets-type-overview"
+          ><img class="icon" src="./images/arrow-down." alt="arrow scroll down"
+        /></a>
+      </section>
+      <!-- Section containig a table of all ticket types and their prices, layer on used in javascript to count "total to pay" for user interaction -->
+      <section id="tickets-type-overview">
+        <!-- a tabular view as been requested on assignment brief -->
+        <table class="tickets-preview-table">
+          <thead>
+            <tr>
+              <th>Ticket Type</th>
+              <th class="column-gap"></th>
+              <!-- to represent a symbol of euro currency i am using special html symbols as reccommended online for better website perfomance -->
+              <th class="price-column">Price(&#8364;)</th>
+              <th class="column-gap"></th>
+              <th>Validity</th>
+              <th class="column-gap"></th>
+              <th>Includes</th>
+              <th class="column-gap"></th>
+              <th class="buy-icon"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Early Bird Weekend Pass</td>
+              <td class="column-gap"></td>
+              <td class="price-column">&#8364;89</td>
+              <td class="column-gap"></td>
+              <td>Day 1 + Day 2</td>
+              <td class="column-gap"></td>
+              <td>
+                <p>
+                  General Admission for both days, no re-entry after 22:00
+                  limited availability
+                </p>
+              </td>
+              <td class="column-gap"></td>
+              <!-- an icon that when pressed leads you to the payment form with this exact ticket type being already selected -->
+              <td class="buy-icon">
+                <a data-ticket="early-weekend" class="arrow-to-the-right"
+                  ><img
+                    class="icon"
+                    src="./images/arrow-to-the-right..png"
+                    alt="arrow get the ticket"
+                /></a>
+              </td>
+            </tr>
+            <tr>
+              <td>Regular Weekend Pass</td>
+              <td class="column-gap"></td>
+              <td class="price-column">&#8364;119</td>
+              <td class="column-gap"></td>
+              <td>Day 1 + Day 2</td>
+              <td class="column-gap"></td>
+              <td>
+                <p>
+                  Full GA access, unlimited re-entry, access to food courts
+                  merch village, chillout garden
+                </p>
+              </td>
+              <td class="column-gap"></td>
+              <td class="buy-icon">
+                <a data-ticket="weekend" class="arrow-to-the-right"
+                  ><img
+                    class="icon"
+                    src="./images/arrow-to-the-right..png"
+                    alt="arrow get the ticket"
+                /></a>
+              </td>
+            </tr>
+            <tr>
+              <td>Friday Day Pass</td>
+              <td class="column-gap"></td>
+              <td class="price-column">&#8364;65</td>
+              <td class="column-gap"></td>
+              <td>Day 1</td>
+              <td class="column-gap"></td>
+              <td>
+                <p>GA access to Horizon Stage + festival areas</p>
+              </td>
+              <td class="column-gap"></td>
+              <td class="buy-icon">
+                <a data-ticket="friday" class="arrow-to-the-right"
+                  ><img
+                    class="icon"
+                    src="./images/arrow-to-the-right..png"
+                    alt="arrow get the ticket"
+                /></a>
+              </td>
+            </tr>
+            <tr>
+              <td>Saturday Day Pass</td>
+              <td class="column-gap"></td>
+              <td class="price-column">&#8364;75</td>
+              <td class="column-gap"></td>
+              <td>Day 2</td>
+              <td class="column-gap"></td>
+              <td>
+                <p>
+                  GA access to Aurora Stage + festival areas, higher production
+                  day
+                </p>
+              </td>
+              <td class="column-gap"></td>
+              <td class="buy-icon">
+                <a data-ticket="saturday" class="arrow-to-the-right"
+                  ><img
+                    class="icon"
+                    src="./images/arrow-to-the-right..png"
+                    alt="arrow get the ticket"
+                /></a>
+              </td>
+            </tr>
+            <tr>
+              <td>VIP Weekend Pass</td>
+              <td class="column-gap"></td>
+              <td class="price-column">&#8364;199</td>
+              <td class="column-gap"></td>
+              <td>Day 1 + Day 2</td>
+              <td class="column-gap"></td>
+              <td>
+                <p>
+                  Fast-lane entry, VIP platform with stage view, premium
+                  restrooms, VIP bar, 1 drink/day
+                </p>
+              </td>
+              <td class="column-gap"></td>
+              <td class="buy-icon">
+                <a data-ticket="vip-weekend" class="arrow-to-the-right"
+                  ><img
+                    class="icon"
+                    src="./images/arrow-to-the-right..png"
+                    alt="arrow get the ticket"
+                /></a>
+              </td>
+            </tr>
+            <tr>
+              <td>Ultra VIP Experience</td>
+              <td class="column-gap"></td>
+              <td class="price-column">&#8364;349</td>
+              <td class="column-gap"></td>
+              <td>Day 1 + Day 2</td>
+              <td class="column-gap"></td>
+              <td>
+                <p>
+                  Backstage lounge, exclusive cocktail bar, artist Q&A, premium
+                  parking, early access
+                </p>
+              </td>
+              <td class="column-gap"></td>
+              <td class="buy-icon">
+                <a data-ticket="ultra-vip" class="arrow-to-the-right"
+                  ><img
+                    class="icon"
+                    src="./images/arrow-to-the-right..png"
+                    alt="arrow get the ticket"
+                /></a>
+              </td>
+            </tr>
+            <tr>
+              <td>Group Bundle (5 people)</td>
+              <td class="column-gap"></td>
+              <td class="price-column">&#8364;499</td>
+              <td class="column-gap"></td>
+              <td>Day 1 + Day 2</td>
+              <td class="column-gap"></td>
+              <td>
+                <p>
+                  General Admission for both days, no re-entry after 22:00,
+                  limited availability
+                </p>
+              </td>
+              <td class="column-gap"></td>
+              <td class="buy-icon">
+                <a data-ticket="group-bundle" class="arrow-to-the-right"
+                  ><img
+                    class="icon"
+                    src="./images/arrow-to-the-right..png"
+                    alt="arrow get the ticket"
+                /></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <!-- Payment form -->
+      <section class="tickets-form-section">
+        <h2 class="section-title">Festival Passes Shop</h2>
+        <form id="ticket-purchase">
+          <!-- each part of the form is separated by fieldset for clearer semantics -->
+          <!-- ------------------------------- -->
+          <!-- Personal information of the user -->
+          <fieldset class="personal-information-box">
+            <h3 class="form-field-title">Pesonal information</h3>
+            <input
+              class="form-input"
+              type="text"
+              name="user-name"
+              id="user-name"
+              placeholder="Full name"
+              required
+            />
+            <!-- an error massage that is empty by default, shows up when the input is invalid -->
+            <p class="error-message"></p>
+            <input
+              class="form-input"
+              type="email"
+              name="email-address"
+              id="email-address"
+              placeholder="Email"
+              required
+            />
+            <p class="error-message"></p>
+            <input
+              class="form-input"
+              type="tel"
+              name="phone-number"
+              id="phone-number"
+              placeholder="Mobile phone"
+              required
+            />
+            <p class="error-message"></p>
+          </fieldset>
+          <!-- ----------------------------------------- -->
+          <!-- ticket type and quantity choosing -->
+          <fieldset class="ticket-choice-box">
+            <h3 class="form-field-title">Choose your ticket</h3>
+            <input
+              class="form-input"
+              id="amount-of-tickets"
+              min="1"
+              max="8"
+              type="number"
+              placeholder="Choose number of tickets"
+            />
+            <p class="error-message"></p>
+            <select class="select-ticket" name="ticket-type" id="ticket-type">
+              <!-- a default empty in value option that acts a role of placeholder for user to know how to interact with it -->
+              <option
+                class="default-select-option"
+                value=""
+                disabled
+                selected
+                hidden
+              >
+                Select your ticket type
+              </option>
+              <option value="earlyWeekend">Early Bird Weekend Pass</option>
+              <option value="weekend">Regular Weekend Pass</option>
+              <option value="friday">Friday Day Pass</option>
+              <option value="saturday">Staurday Day Pass</option>
+              <option value="vipWeekend">VIP Weekend Pass</option>
+              <option value="ultraVip">Ultra VIP Experience</option>
+              <option value="groupBundle">Group Bundle (5 peopel)</option>
+            </select>
+          </fieldset>
+          <!-- ---------------------------------------------- -->
+          <!-- Payment part of the form -->
+          <fieldset class="payment-method-box">
+            <h3 class="form-field-title">Choose Payment Method</h3>
+            <label class="payment-option" for="credit-card">
+              <input type="radio" name="payment-method" id="credit-card" />
+              Credit Card
+            </label>
+            <label class="payment-option" for="debit-card">
+              <input type="radio" name="payment-method" id="debit-card" />
+              Debit Card
+            </label>
+            <label class="payment-option" for="paypal">
+              <input type="radio" name="payment-method" id="paypal" />
+              Paypal
+            </label>
+            <label class="payment-option" for="apple-pay">
+              <input type="radio" name="payment-method" id="apple-pay" />
+              Apple Pay
+            </label>
+          </fieldset>
+          <!-- ------------------------------------------------------- -->
+          <!-- Checkout -->
+          <div class="checkout-box">
+            <p>Total to pay: &#8364; <span id="total-to-pay">0</span></p>
+            <!-- Terms and conditions -->
+            <!-- Terms and Conditions part of the checkout section is a link/button, when pressed opens modal window with simple terms and conditions rules (written by ai), modal window at the footer works for every page -->
+            <p>
+              Pressing button "Purchase" I agree with
+              <button
+                class="open-terms-and-conditions"
+                data-target="#terms-and-conditions"
+              >
+                Terms and Conditions
+              </button>
+            </p>
+            <!-- Modal (hidden by default) window with terms and conditions -->
+            <div class="terms-and-conditions-box" id="terms-and-conditions">
+              <div class="terms-and-conditions-content">
+                <h3>Terms and Conditions</h3>
+                <p>
+                  By purchasing a ticket and attending Innerbloom festival 2026,
+                  you agree that all sales are final and non-refundable, lineup
+                  and schedule may change without notice, and entry may be
+                  refused for safety or security reasons. You must follow all
+                  staff instructions, and bringing prohibited items such as
+                  drugs, weapons, or outside alcohol is not allowed. The
+                  festival is not responsible for lost belongings, injuries, or
+                  damages incurred on-site. A valid ticket and ID are required
+                  for entry, and by entering the event, you consent to being
+                  photographed or recorded for promotional use.
+                </p>
+                <button class="close-terms-and-conditions">Close</button>
+              </div>
+            </div>
+            <!-- ----------------------------------------------------- -->
+            <button class="purchase-button" type="submit">Purchase</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- --------------------------------------------------- -->
+    <!-- Footer (reused on every other page of this project) -->
+    <footer>
+      <address class="footer-container">
+        <a href="./index.html">
+          <img
+            class="icon"
+            src="./images/sticker.webp"
+            alt="Innerbloom official icon"
+          />
+        </a>
+        <!-- social media links left blank and actually do not link anywhere -->
+        <ul class="footer-menu">
+          <li>
+            <a href="#">
+              <img
+                class="social-icon instagram-icon"
+                src="./images/instagram."
+                alt="instagram icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                class="social-icon facebook-icon"
+                src="./images/facebook."
+                alt="facebook icon"
+              />
+            </a>
+          </li>
+          <li>
+            <button
+              class="open-terms-and-conditions"
+              data-target="#terms-and-conditions"
+            >
+              Terms and Conditions
+            </button>
+          </li>
+          <li>
+            <p class="address-copyright">&copy; 2025 Copyright</p>
+          </li>
+        </ul>
+      </address>
+    </footer>
+    <!-- script has been put at the end to ensure the DOM loads before javascript is executed -->
+    <script src="./script.js"></script>
+  </body>
+</html>

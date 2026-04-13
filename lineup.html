@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Innerbloom Lineup</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Header: same for every page -->
+    <header>
+      <div class="header-container">
+        <nav class="header-nav-bar">
+          <!-- main icon links to the main/starting page -->
+          <a class="brand-icon" href="./index.html">
+            <img
+              class="icon"
+              src="./images/sticker.webp"
+              alt="Innerbloom official icon"
+            />
+          </a>
+          <ul class="header-menu">
+            <li><a class="menu-items" href="./index.html">Home</a></li>
+            <li>
+              <a class="menu-items" target="_blank" href="./lineup.html"
+                >Lineup</a
+              >
+            </li>
+            <li>
+              <a class="menu-items" target="_blank" href="./tickets.html"
+                >Tickets</a
+              >
+            </li>
+            <li>
+              <a class="menu-items" target="_blank" href="./schedule.html"
+                >Schedule</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- --------------------------------------------------------- -->
+
+    <!-- Main part of the lineup.html page -->
+    <main>
+      <section class="lineup-hero-title-box">
+        <div class="hero-lineup-section">
+          <h1>lineup</h1>
+          <h2>Featured artists</h2>
+        </div>
+        <!-- a button to scroll down next section (reused on other pages as well) -->
+        <a class="arrow-down-icon" href="./lineup.html#lineup-container"
+          ><img class="icon" src="./images/arrow-down." alt="arrow scroll down"
+        /></a>
+      </section>
+      
+      <!-- ---------------------------------------------------------- -->
+      <!-- Section with all feature artists inside so called "cards" -->
+      <section id="lineup-container">
+        <ul class="lineup-artist-cards">
+          <!-- each artist card is a part of a list -->
+          <li class="artist-card">
+            <article class="artist-card-content">
+              <img src="./images/Artbat.webp" alt="artbat">
+              <div class="artist-card-text-block">
+                <h3>Artbat</h3>
+                <p>Genre: techno/house/electronic-dance</p>
+                <button id="modal-window-button" data-target="#artbat">
+                  More info &rarr;
+                </button>
+                <!-- container with modal window contents of every artist -->
+                <div id="artbat" class="artist-modal-container">
+                  <div class="artist-modal-content">
+                    <p>Origin: Kyiv, Ukraine</p>
+                    <p>
+                      <span class="text-accent">Biography:</span> A DJ/producer duo from Kyiv (Artur Kryvenko & Vitaliy Limarenko), formed in 2014. They broke through quickly after their track “Mandrake” and gained support from major DJs. Over time they rose to global prominence with chart-topping releases, festival appearances, and — in 2021 — launching their own label. Their evolving sound and energetic performances have made them a major act in contemporary electronic dance music.
+                    </p>
+                    <button id="close-modal-button">Close</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="artist-card">
+            <article class="artist-card-content">
+              <img src="./images/Boris-Brejcha.png" alt="boris brejcha">
+              <div class="artist-card-text-block">
+                <h3>Boris Brejcha</h3>
+                <p>Genre: minimal techno</p>
+                <button data-target="#boris-brejcha" id="modal-window-button">
+                  More info &rarr;
+                </button>
+                <!-- container with modal window contents of every artist -->
+                <div id="boris-brejcha" class="artist-modal-container">
+                  <div class="artist-modal-content">
+                    <p>Origin: Germany</p>
+                    <p>
+                      <span class="text-accent">Biography:</span> German DJ producer, born 1981. He began producing in his teens, and in 2006 released his first tracks and played his first festival. He created the “High-Tech Minimal” style, founded his own label, and — with his trademark Joker mask — became a major force on the global techno/festival circuit.
+                    </p>
+                    <button id="close-modal-button">Close</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="artist-card">
+            <article class="artist-card-content"">
+            <img src="./images/Monolink.jpg" alt="">  
+              <div class="artist-card-text-block">
+                <h3>Monolink</h3>
+                <p>Genre: ambient/minimal techno/house</p>
+                <button data-target="#monolink" id="modal-window-button">More info &rarr;</button>
+                <!-- container with modal window contents of every artist -->
+                <div id="monolink" class="artist-modal-container">
+                  <div class="artist-modal-content">
+                    <p>Origin: Germany</p>
+                    <p>
+                      <span class="text-accent">Biography:</span> Real name Steffen Linck, a German singer-songwriter turned electronic producer. Monolink merges live vocals, guitar/piano and electronic beats — offering emotionally rich, atmospheric sets. He released his debut album in 2018 and has since grown into one of the defining voices bridging live instrumentation and dancefloor-oriented electronica.
+                    </p>
+                    <button id="close-modal-button">Close</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="artist-card">
+            <article class="artist-card-content">
+            <img src="./images/Rufus-Du-Sol.jpeg" alt="Rufus Du Sol">  
+              <div class="artist-card-text-block">
+                <h3>Rufus Du Sol</h3>
+                <p>Genre: Indie dance/deep house</p>
+                <button data-target="#rufus-du-sol" id="modal-window-button">More info &rarr;</button>
+                <!-- container with modal window contents of every artist -->
+                <div id="rufus-du-sol" class="artist-modal-container">
+                  <div  class="artist-modal-content">
+                    <p>Origin: Australia</p>
+                    <p>
+                      <span class="text-accent">Biography:</span> Australian trio from Sydney (formed 2010). They gained recognition for their atmospheric, emotionally charged blend of electronic production and live instrumentation. Over years they have released multiple albums and toured globally, becoming one of the most successful electronic-drawing acts from Australia, known for lush vocals, synth-driven grooves and immersive live shows.
+                    </p>
+                    <button id="close-modal-button">Close</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="artist-card">
+            <article class="artist-card-content">
+            <img src="./images/Jan-Blomqwist.jpg" alt="Jan Bloqwist">
+              <div class="artist-card-text-block">
+                <h3>Jan Blomqvist</h3>
+                <p>Genre: melodic house/deep house</p>
+                <button data-target="#jan-blomqwist" id="modal-window-button">More info &rarr;</button>
+                <!-- container with modal window contents of every artist -->
+                <div id="jan-blomqwist" class="artist-modal-container">
+                  <div class="artist-modal-content">
+                    <p>Origin: Germany</p>
+                    <p>
+                      <span class="text-accent">Biography:</span> German singer, songwriter, producer and live performer — originally in rock/grunge-type bands. After moving to Berlin, he pivoted to electronic music, combining his vocal and instrumental roots with club-ready electronic production. Known for his emotionally melodic, introspective sound and live shows that blend songcraft with dancefloor energy. His 2025 album “MUTE” reflects his evolving artistry.
+                    </p>
+                    <button id="close-modal-button">Close</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="artist-card">
+            <article class="artist-card-content">
+              <img src="./images/Lane-8.jpg" alt="Lane 8">
+              <div class="artist-card-text-block"> 
+                <h3>Lane 8</h3>
+                <p>Genre: melodic house/deep house</p>
+                <button data-target="#lane8" id="modal-window-button">More info &rarr;</button>
+                <!-- container with modal window contents of every artist -->
+                <div id="lane8" class="artist-modal-container">
+                  <div class="artist-modal-content">
+                    <p>Origin: USA</p>
+                    <p>
+                      <span class="text-accent">Biography:</span> Daniel Goldstein, known professionally as Lane 8, is an American DJ/producer who rose to prominence on Anjunadeep with his 2015 debut Rise and later founded the This Never Happened label and show concept that bans phone recording to encourage presence. He’s known for emotive, journey-style productions and large outdoor gatherings, and has released multiple studio albums including Little by Little (2018), Brightest Lights (2020), Reviver (2022) and Childish (2024).
+                    </p>
+                    <button id="close-modal-button">Close</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- --------------------------------------------------- -->
+    <!-- Footer (reused on every other page of this project) -->
+    <footer>
+      <address class="footer-container">
+        <a href="./index.html">
+          <img
+            class="icon"
+            src="./images/sticker.webp"
+            alt="Innerbloom official icon"
+          />
+        </a>
+        <!-- social media links left blank and actually do not link anywhere -->
+        <ul class="footer-menu">
+          <li>
+            <a href="#">
+              <img
+                class="social-icon instagram-icon"
+                src="./images/instagram."
+                alt="instagram icon"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                class="social-icon facebook-icon"
+                src="./images/facebook."
+                alt="facebook icon"
+              />
+            </a>
+          </li>
+          <!-- Terms and Conditions part of the footer is a link/button, when pressed opens modal window with simple terms and conditions rules (written by ai), modal window at the footer works for every page -->
+          <li>
+            <button
+              class="open-terms-and-conditions"
+              data-target="#terms-and-conditions"
+            >
+              Terms and Conditions
+            </button>
+            <!-- Modal (hidden by default) window with terms and conditions -->
+            <div class="terms-and-conditions-box" id="terms-and-conditions">
+              <div class="terms-and-conditions-content">
+                <h3>Terms and Conditions</h3>
+                  <p>
+                  By purchasing a ticket and attending Innerbloom festival 2026, you agree that all sales are final and non-refundable, lineup and schedule may change without notice, and entry may be refused for safety or security reasons. You must follow all staff instructions, and bringing prohibited items such as drugs, weapons, or outside alcohol is not allowed. The festival is not responsible for lost belongings, injuries, or damages incurred on-site. A valid ticket and ID are required for entry, and by entering the event, you consent to being photographed or recorded for promotional use.
+                </p>
+                <button class="close-terms-and-conditions">Close</button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <p class="address-copyright">&copy; 2025 Copyright</p>
+          </li>
+        </ul>
+      </address>
+    </footer>
+    <!-- script has been put at the end to ensure the DOM loads before javascript is executed -->
+    <script src="./script.js"></script>
+  </body>
+</html>
